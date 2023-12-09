@@ -1,0 +1,27 @@
+post http://localhost:5000/v1/api/bebida
+content-type: application/json
+
+{
+    "nombre": "Pepsi",
+    "precio": "0.75",
+    "cantidad": "20"
+}
+
+###
+patch http://localhost:5000/v1/api/bebida/60fb4fc2b5bf1d297073afa5
+content-type: application/json
+
+{
+    "nombre": "Agua personal",
+    "precio": "0.75",
+    "cantidad": "26"
+}
+
+###
+get http://localhost:5000/v1/api/bebida
+
+###
+get http://localhost:5000/v1/api/bebida/61109112b3b7a14dc4e0358a
+
+###
+delete http://localhost:5000/v1/api/bebida/610f2bd3cdaa700dfcbd65a3

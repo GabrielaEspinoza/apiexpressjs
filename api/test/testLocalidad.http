@@ -1,0 +1,27 @@
+post http://localhost:5000/v1/api/localidad
+content-type: application/json
+
+{
+    "nombre": "VIP",
+    "precio": "$4.00",
+    "descripcion": "20 PERSONAS POR MESA"
+}
+
+###
+patch http://localhost:5000/v1/api/localidad/610c45416bd0ce35e419a22b
+content-type: application/json
+
+{
+    "nombre": "VIP",
+    "precio": "$5,00",
+    "descripcion": "15 PERSONAS POR MESA"
+}
+
+###
+get http://localhost:5000/v1/api/localidad
+
+###
+get http://localhost:5000/v1/api/localidad/610c45416bd0ce35e419a22b
+
+###
+delete http://localhost:5000/v1/api/localidad/610c456a6bd0ce35e419a22c

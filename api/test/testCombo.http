@@ -1,0 +1,28 @@
+post http://localhost:5000/v1/api/combo
+content-type: application/json
+
+{
+    "nombre": "Combo",
+    "zona": "VIP",
+    "precio": "15.0",
+    "descripcion": "..."
+}
+
+###
+patch http://localhost:5000/v1/api/combo/6115c44cc7f59f0404461598
+content-type: application/json
+
+{
+    "nombre": "Combo Free",
+    "precio": "30.0",
+    "descripcion": "Prueba"
+}
+
+###
+get http://localhost:5000/v1/api/combo
+
+###
+get http://localhost:5000/v1/api/combo/6115c44cc7f59f0404461598
+
+###
+delete http://localhost:5000/v1/api/combo/6115c44cc7f59f0404461598

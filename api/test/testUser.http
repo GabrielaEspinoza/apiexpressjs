@@ -1,0 +1,27 @@
+post http://localhost:5000/v1/api/user
+content-type: application/json
+
+{
+    "name": "Albert",
+    "username": "Albt",
+    "password": "admin"
+}
+
+###
+patch http://localhost:5000/v1/api/user/60ff4e1adec6bb2740ccae82
+content-type: application/json
+
+{
+    "name": "Alberto",
+    "username": "Abt",
+    "password": "admin"
+}
+
+###
+get http://localhost:5000/v1/api/user
+
+###
+get http://localhost:5000/v1/api/user/60fb50bab5bf1d297073afa7
+
+###
+delete http://localhost:5000/v1/api/user/60ff4e1adec6bb2740ccae82
