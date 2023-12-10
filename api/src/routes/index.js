@@ -11,7 +11,7 @@ require('express-async-errors')
 const { NotFoundMiddleware, ErrorMiddleware } = require('../middlewares');
 
 // nivel 0
-module.exports = function ({ HomeRoutes, UserRoutes , BebidaRoutes, LocalidadRoutes, ComboRoutes, ClienteRoutes}) {
+module.exports = function ({ HomeRoutes, UserRoutes , BebidaRoutes, LocalidadRoutes, ComboRoutes, ClienteRoutes, SensorRoutes}) {
     const router = express.Router();
     const apiRoutes = express.Router();
 
@@ -27,6 +27,7 @@ module.exports = function ({ HomeRoutes, UserRoutes , BebidaRoutes, LocalidadRou
     apiRoutes.use('/localidad', LocalidadRoutes);
     apiRoutes.use('/combo', ComboRoutes);
     apiRoutes.use('/cliente', ClienteRoutes);
+    apiRoutes.use('/sensor', SensorRoutes);
     
     apiRoutes.use('/public', express.static('public'));
     

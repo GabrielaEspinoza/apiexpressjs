@@ -3,6 +3,7 @@ module.exports = {
     BebidaModel: require('./bebida.model'),
     LocalidadModel: require('./localidad.model'),
     ComboModel: require('./combo.model'),
-    ClienteModel: require('./cliente.model')
+    ClienteModel: require('./cliente.model'),
+    SensorModel: require('./sensor.model')
 
 }

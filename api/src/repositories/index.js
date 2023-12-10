@@ -3,5 +3,6 @@ module.exports = {
     BebidaRepository: require ('./bebida.repository'),
     LocalidadRepository: require ('./localidad.repository'),
     ComboRepository: require ('./combo.repository'),
-    ClienteRepository: require ('./cliente.repository')
+    ClienteRepository: require ('./cliente.repository'),
+    SensorRepository: require ('./sensor.repository')
 }

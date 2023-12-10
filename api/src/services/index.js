@@ -4,5 +4,6 @@ module.exports = {
     BebidaService: require('./bebida.service'),
     LocalidadService: require('./localidad.service'),
     ComboService: require('./combo.service'),
-    ClienteService: require('./cliente.service')
+    ClienteService: require('./cliente.service'),
+    SensorService: require('./sensor.service')
 }

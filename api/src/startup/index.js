@@ -12,7 +12,7 @@ class Server {
     start() {
         return new Promise(resolve => {
             _express.listen(_config.PORT, () => {
-                console.log(`server go ${_config.PORT}`)
+                console.log(`Servicio ejecutandose en el puerto:  ${_config.PORT}`)
                 resolve();
             })
         });
