@@ -35,8 +35,8 @@ const Dashboard = () => {
                 height={400}
             >
                 <VictoryLegend
-                    x={270}
-                    y={50}
+                    x={170}
+                    y={5}
                     orientation="horizontal"
                     gutter={20}
                     style={{ border: { stroke: 'black' }, title: { fontSize: 15 } }}
