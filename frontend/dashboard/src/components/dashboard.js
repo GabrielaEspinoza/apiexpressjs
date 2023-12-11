@@ -3,12 +3,20 @@ import { VictoryChart, VictoryBar, VictoryAxis, VictoryLegend, VictoryLabel } fr
 
 const Dashboard = () => {
     const [chartData, setChartData] = useState([]);
+    const [totalRecords, setTotalRecords] = useState(0);
+
+    
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const response = await fetch('http://34.16.165.131:5000/v1/api/sensor');
                 let jsonData = await response.json();
+
+                const total = jsonData.length;
+                setTotalRecords(total);
+
+                
 
                 if (jsonData.length > 25) {
                     jsonData = jsonData.slice(jsonData.length - 25);
@@ -26,6 +34,7 @@ const Dashboard = () => {
         return () => clearInterval(intervalId); // Limpiar el intervalo al desmontar el componente
     }, []);
 
+
     return (
         <div style={{ width: '80%', margin: '0 auto' }}>
             <h1 style={{ textAlign: 'center' }}>Datos de Sensor HC-SR501</h1>
@@ -35,7 +44,7 @@ const Dashboard = () => {
                 height={400}
             >
                 <VictoryLegend
-                    x={170}
+                    x={80}
                     y={5}
                     orientation="horizontal"
                     gutter={20}
@@ -44,6 +53,7 @@ const Dashboard = () => {
                         { name: 'Tiempo', symbol: { fill: 'rgba(75, 192, 192, 0.6)' } },
                         { name: 'Detencion', symbol: { fill: 'rgba(255, 99, 132, 0.6)' } },
                         { name: 'Estado', symbol: { fill: 'rgba(54, 162, 235, 0.6)' } },
+                        { name: `Total de Registros: ${totalRecords}`, symbol: { type: "circle" } }
                     ]}
                 />
                 <VictoryBar
