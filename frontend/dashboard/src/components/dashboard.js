@@ -44,7 +44,7 @@ const Dashboard = () => {
                 height={400}
             >
                 <VictoryLegend
-                    x={80}
+                    x={112}
                     y={5}
                     orientation="horizontal"
                     gutter={20}
@@ -52,7 +52,6 @@ const Dashboard = () => {
                     data={[
                         { name: 'Tiempo', symbol: { fill: 'rgba(75, 192, 192, 0.6)' } },
                         { name: 'Detencion', symbol: { fill: 'rgba(255, 99, 132, 0.6)' } },
-                        { name: 'Estado', symbol: { fill: 'rgba(54, 162, 235, 0.6)' } },
                         { name: `Total de Registros: ${totalRecords}`, symbol: { type: "circle" } }
                     ]}
                 />
